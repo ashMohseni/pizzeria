@@ -12,6 +12,7 @@ import javafx.scene.control.Menu;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField; 
+import javafx.scene.control.ToggleGroup;
 
 /**
  * FXML Controller class
@@ -39,6 +40,7 @@ public class PizzeriaController implements Initializable {
     @FXML private Button confirm;
     @FXML private Button cancel;
     @FXML private Button exit;
+    @FXML private ToggleGroup togglepizzas;
 
     /**
      * Initializes the controller class.
