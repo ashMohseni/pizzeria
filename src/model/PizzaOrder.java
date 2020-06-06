@@ -20,20 +20,22 @@ public class PizzaOrder {
 
     public PizzaOrder() {
     }
+    
+     public PizzaOrder(int productchoice, int numProduct, int pizzaordrink) {
+          if (pizzaordrink == 0) {
+               drinksCost = 0;
+               setPizza(productchoice);
+               setPizzaCost(numProduct);
+          } else {
+               pizzaCost = 0;
+               setPizzaCost(productchoice);
+               setDrinksCost(numProduct);
+          }
+     }
 
-    public PizzaOrder(int drinkNum, int pizzaNum, double pizzaCost, double drinksCost,
-            double toppingsCost, PizzaSize size, Drinks drinks) {
-        this.drinkNum = drinkNum;
-        this.pizzaNum = pizzaNum;
+    public void setPizzaCost(int pizzaNum) {
         this.pizzaCost = pizzaCost;
-        this.drinksCost = drinksCost;
-        this.toppingsCost = toppingsCost;
-        this.size = size;
-        this.drinks = drinks;
-    }  
-
-    public void setPizzaCost(double pizzaCost) {
-        this.pizzaCost = pizzaCost;
+        pizzaCost = pizzaNum * size.getPrice();
     }
 
     public void setDrinksCost(double drinksCost) {
@@ -43,6 +45,10 @@ public class PizzaOrder {
     public void setToppingsCost(double toppingsCost) {
         this.toppingsCost = toppingsCost;
     }
+      
+    public void setPizza(int pizzaChoice) {
+          size = PizzaSize.values()[pizzaChoice];
+     }
 
     public void setSize(PizzaSize size) {
         this.size = size;
@@ -56,9 +62,14 @@ public class PizzaOrder {
         this.toppingList = toppingList;
     }
 
-    @Override
-    public String toString() {
-        return "PizzaOrder{" + '}';
+    public String toString( int pizzaChoice, int numberOfPizzas) {
+        String pizzaOrder = " ";
+        
+        if (size != null) {
+            pizzaOrder = String.format("Pizzas:\t%40.2f%n  \t%s %s%n Toppings:\t%n",
+                       pizzaCost, numberOfPizzas + " " , PizzaSize.values()[pizzaChoice]);
+        }
+        return pizzaOrder;
     }
 
 }

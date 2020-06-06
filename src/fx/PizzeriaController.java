@@ -13,6 +13,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField; 
 import javafx.scene.control.ToggleGroup;
+import model.PizzaOrder;
 
 /**
  * FXML Controller class
@@ -41,6 +42,8 @@ public class PizzeriaController implements Initializable {
     @FXML private Button cancel;
     @FXML private Button exit;
     @FXML private ToggleGroup togglepizzas;
+    private int pizzaChoice = -1;
+    private int drinkChoice = -1;
 
     /**
      * Initializes the controller class.
@@ -52,6 +55,7 @@ public class PizzeriaController implements Initializable {
 
     @FXML
     private void confirm(ActionEvent event) {
+        calculation();
     }
 
     @FXML
@@ -61,5 +65,44 @@ public class PizzeriaController implements Initializable {
     @FXML
     private void exit(ActionEvent event) {
     }
+    
+    private int calculation(){
+        
+        if (pizzaSize() >= 0) {
+        PizzaOrder order = new PizzaOrder(pizzaSize(), pizzaNum(), 0);
+        receipt.setText(order.toString(pizzaChoice, pizzaNum()) );
+        }
+
+        return 0;
+    }
+     
+      /**
+      * Returns "pizzaChoice" variable based on which size of pizza is being selected.
+      * @return pizzaChoice 
+      */
+    private int pizzaSize(){
+        if(small.isSelected()){
+            pizzaChoice = 0;
+        }
+        if (medium.isSelected()) {
+            pizzaChoice = 1;
+        }
+        if (large.isSelected()) {
+            pizzaChoice = 2;
+        }
+        return pizzaChoice;
+    }
+    
+    private int pizzaNum(){
+        int number = -1;
+        try{
+            number = Integer.parseInt(pizzaNum.getText().trim());            
+        }
+        catch(Exception ex){
+            ex.getMessage();
+        }
+        return number;
+    }
+    
     
 }
