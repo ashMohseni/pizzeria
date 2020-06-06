@@ -2,6 +2,7 @@
 package fx;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +15,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField; 
 import javafx.scene.control.ToggleGroup;
 import model.PizzaOrder;
+import model.Toppings;
 
 /**
  * FXML Controller class
@@ -42,9 +44,14 @@ public class PizzeriaController implements Initializable {
     @FXML private Button cancel;
     @FXML private Button exit;
     @FXML private ToggleGroup togglepizzas;
+    
+    // an int variable used by pizzaSize() method to access the PizzaSize enums
     private int pizzaChoice = -1;
     private int drinkChoice = -1;
-
+    
+    // instance of PizzaOrder class
+    PizzaOrder order = new PizzaOrder(); 
+    
     /**
      * Initializes the controller class.
      */
@@ -69,8 +76,8 @@ public class PizzeriaController implements Initializable {
     private int calculation(){
         
         if (pizzaSize() >= 0) {
-        PizzaOrder order = new PizzaOrder(pizzaSize(), pizzaNum(), 0);
-        receipt.setText(order.toString(pizzaChoice, pizzaNum()) );
+        PizzaOrder order = new PizzaOrder(pizzaSize(), pizzaNum(), 0, topping());
+        receipt.setText(order.toString(pizzaChoice, pizzaNum(), toppingCalc()) );
         }
 
         return 0;
@@ -93,6 +100,10 @@ public class PizzeriaController implements Initializable {
         return pizzaChoice;
     }
     
+      /**
+      * Returns "number" an Integer variable as the number of pizzas being purchased
+      * @return number  
+      */
     private int pizzaNum(){
         int number = -1;
         try{
@@ -102,6 +113,46 @@ public class PizzeriaController implements Initializable {
             ex.getMessage();
         }
         return number;
+    }
+    
+      /**
+      * A method that adds the toppings ordered to the arrayList<Topping> in PizzaOrder class
+      * @return order.getToppingList() - an array indicating the ordered toppings
+      */
+    public ArrayList<Toppings> topping(){
+        if (cheese.isSelected()) {
+           order.topping(Toppings.CHEESE);
+        }
+        if (pepperoni.isSelected()) {
+            order.topping(Toppings.PEPPERONI);
+        }
+        if (mushrooms.isSelected()) {
+            order.topping(Toppings.MUSHROOMS);
+        }
+        if (olives.isSelected()) {
+            order.topping(Toppings.OLIVES);
+        } 
+        return order.getToppingList();
+    }
+    
+      /**
+      * A method that calculates the toppings order and returns "toppingOrder" variable
+      * @return toppingOrder - the sum of toppings
+      */
+    private double toppingCalc(){
+        double toppingCalc = 0.0;
+        
+        if (cheese.isSelected()) {
+            toppingCalc +=  pizzaNum() * Toppings.CHEESE.getPrice();
+        }  if (pepperoni.isSelected()){
+             toppingCalc +=  pizzaNum() * Toppings.PEPPERONI.getPrice();
+        }  if (mushrooms.isSelected()){
+            toppingCalc += pizzaNum() * Toppings.MUSHROOMS.getPrice();
+        }  if (olives.isSelected()){
+            toppingCalc += pizzaNum() * Toppings.OLIVES.getPrice();
+        }
+        
+        return toppingCalc;
     }
     
     
