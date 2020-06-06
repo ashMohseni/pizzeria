@@ -89,7 +89,7 @@ public class PizzaOrder {
     public String toppingOrder(int numberOfPizzas) {
         String toppingOrder = " ";
         for (int i = 0; i < toppingList.size(); i++) {
-            toppingOrder = String.format("\t%n  \t%s %s%n\t%n\n", numberOfPizzas, toppingList.get(i));
+            toppingOrder += String.format("\t%n  \t%s %s%n\t%n", numberOfPizzas, toppingList.get(i));
         }
 
         return toppingOrder;

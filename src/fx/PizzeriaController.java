@@ -62,7 +62,9 @@ public class PizzeriaController implements Initializable {
 
     @FXML
     private void confirm(ActionEvent event) {
-        calculation();
+        calculation(); 
+        // To clear the arrayList after submiting Confirm button
+        order.getToppingList().clear();
     }
 
     @FXML
@@ -99,7 +101,7 @@ public class PizzeriaController implements Initializable {
         }
         return pizzaChoice;
     }
-    
+
       /**
       * Returns "number" an Integer variable as the number of pizzas being purchased
       * @return number  
@@ -127,7 +129,7 @@ public class PizzeriaController implements Initializable {
             order.topping(Toppings.PEPPERONI);
         }
         if (mushrooms.isSelected()) {
-            order.topping(Toppings.MUSHROOMS);
+           order.topping(Toppings.MUSHROOMS);
         }
         if (olives.isSelected()) {
             order.topping(Toppings.OLIVES);
