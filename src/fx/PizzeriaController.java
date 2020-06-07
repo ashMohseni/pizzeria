@@ -72,6 +72,19 @@ public class PizzeriaController implements Initializable {
 
     @FXML
     private void cancel(ActionEvent event) {
+        receipt.setText("");
+        small.setSelected(false);
+        medium.setSelected(false);
+        large.setSelected(false);
+        cheese.setSelected(false);
+        pepperoni.setSelected(false);
+        olives.setSelected(false);
+        mushrooms.setSelected(false);
+        coke.setSelected(false);
+        juice.setSelected(false);
+        chocolate_milk.setSelected(false);
+        pizzaNum.setText("");
+        drinkNum.setText("");
     }
 
     @FXML
