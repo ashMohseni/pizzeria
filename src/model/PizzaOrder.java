@@ -37,9 +37,12 @@ public class PizzaOrder {
         setDrinkType(drinkType);
     }
 
-    public void setPizzaCost(int pizzaNum) {
-        this.pizzaCost = pizzaCost;
+    public void setPizzaCost(int pizzaNum) { 
+        if (pizzaNum == -1) {
+              this.pizzaCost = pizzaCost;
+        } else {
         pizzaCost = pizzaNum * size.getPrice();
+        }
     }
 
     public void setPizzaChoice(int pizzaChoice) {
