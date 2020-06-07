@@ -180,11 +180,14 @@ public class PizzaOrder {
         // when everything has been ordered
         if (pizzaChoice >= 0 && drinkType >= 0  ) {
             finalPrint = PizzaOrder() + DrinkOrder();
+        } else if (pizzaChoice >= 0 && toppingsCost ==0){
+            finalPrint = "\t**ERROR**\nYou should at least choose one topping";
         } else if (pizzaChoice >= 0 ) {
             finalPrint = PizzaOrder();
         } else if (drinkType >= 0 ) {
             finalPrint = DrinkOrder();
-        }
+        } 
+
         
         
         return finalPrint;
