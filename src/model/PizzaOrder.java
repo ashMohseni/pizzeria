@@ -23,7 +23,7 @@ public class PizzaOrder {
     }
 
     public PizzaOrder(int pizzaSize, int pizzaNum, ArrayList<Toppings> topping, double toppingCalc,
-            ArrayList<Drinks> drink, double drinkCalc, int drinkNum) {
+            ArrayList<Drinks> drink, double drinkCalc, int drinkNum, int drinkType) {
         setPizza(pizzaSize);
         setPizzaChoice(pizzaSize);
         setPizzaCost(pizzaNum);
@@ -33,6 +33,7 @@ public class PizzaOrder {
         setDrinkList(drink);
         setDrinksCost(drinkCalc);
         setDrinkNum(drinkNum);
+        setDrinkType(drinkType);
     }
 
     public void setPizzaCost(int pizzaNum) {
@@ -59,7 +60,10 @@ public class PizzaOrder {
     public void setPizza(int pizzaChoice) {
         size = PizzaSize.values()[pizzaChoice];
     }
-
+    public void setDrinkType(int drinkType) {
+        drinks = Drinks.values()[drinkType];
+    }
+    
     public void setSize(PizzaSize size) {
         this.size = size;
     }
@@ -159,8 +163,14 @@ public class PizzaOrder {
     }
 
     public String toString() {
-
-        return PizzaOrder();
+        String finalPrint = " ";
+        
+        // when everything has been ordered
+        if (size != null && drinks != null) {
+            finalPrint = PizzaOrder() + DrinkOrder();
+        }
+        
+        return finalPrint;
     }
 
 }

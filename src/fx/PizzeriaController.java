@@ -80,16 +80,10 @@ public class PizzeriaController implements Initializable {
     
     private int calculation(){
         
-        if (pizzaSize() >= 0) {
-        PizzaOrder order = new PizzaOrder(pizzaSize(), pizzaNum(), topping(), toppingCalc(), drinks(), 0, 0);
+        if (pizzaSize() >= 0 && drinkType() >= 0 ) {
+        PizzaOrder order = new PizzaOrder(pizzaSize(), pizzaNum(), topping(), toppingCalc(), drinks(), drinkCalc(), drinkNum(), drinkType());
        receipt.setText(order.toString() );
         } 
-        
-        if(drinkType() >= 0){
-        PizzaOrder order = new PizzaOrder(0, 0, topping(), 0, drinks(), drinkCalc(), drinkNum());
-        receipt.setText(order.toString() );
-        }
-        
 
         return 0;
     }
