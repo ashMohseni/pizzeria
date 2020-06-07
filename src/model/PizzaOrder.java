@@ -19,6 +19,7 @@ public class PizzaOrder {
     private Drinks drinks;
     private ArrayList<Toppings> toppingList = new ArrayList<>();
     private ArrayList<Drinks> drinkList = new ArrayList<>();
+    double tax = 0.13;
 
     public PizzaOrder() {
     }
@@ -175,6 +176,24 @@ public class PizzaOrder {
     }
     
      /**
+     * A method that calculates the subtotal + HST + Total  and returns "finalOrder"
+     * variable
+     *
+     * @return finalOrder - subtotal + HST + Total 
+     */
+        public String FinalOrder() {
+        String finalOrder = " ";
+        double subtotal = pizzaCost + drinksCost + toppingsCost;
+        double HST = subtotal * tax;
+        double total = subtotal + HST;
+        
+         finalOrder = String.format("\n=================================%n"
+                  + "\nSubtotal:\t\t\t%32.2f%nHST:\t\t\t\t%40.2f%nTotal:\t\t\t%40.2f%n", subtotal, HST, total);
+         
+        return finalOrder;
+    }
+        
+     /**
      * A method that checks the exceptions and return the finalPrint to be displayed
      *  in PizzeriaController
      *
@@ -185,7 +204,7 @@ public class PizzaOrder {
         
         // when everything has been ordered
         if (pizzaChoice >= 0 && drinkType >= 0  && toppingsCost != 0 ) {
-            finalPrint = PizzaOrder() + DrinkOrder();
+            finalPrint = PizzaOrder() + DrinkOrder() + FinalOrder();
         } 
         
         //when only pizza is being selected without topping
@@ -205,12 +224,12 @@ public class PizzaOrder {
         
          // Pizza exception
         else if (pizzaChoice >= 0  ) {
-            finalPrint = PizzaOrder();
+            finalPrint = PizzaOrder() + FinalOrder();
         } 
       
         // Drink Exception
         else if (drinkType >= 0 ) {
-            finalPrint = DrinkOrder();
+            finalPrint = DrinkOrder() + FinalOrder();
         } 
         
         return finalPrint;
