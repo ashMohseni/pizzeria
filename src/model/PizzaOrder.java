@@ -173,7 +173,13 @@ public class PizzaOrder {
         String finalDrink = drinksTitle + drinksOrder;
         return finalDrink;
     }
-
+    
+     /**
+     * A method that checks the exceptions and return the finalPrint to be displayed
+     *  in PizzeriaController
+     *
+     * @return finalPrint - the final print to be displayed
+     */
     public String toString() {
         String finalPrint = " ";
         
@@ -188,19 +194,24 @@ public class PizzaOrder {
         }
         
         //when only topping is being selected without pizza
-        else if (toppingsCost != 0 && pizzaChoice == -1  ) {
+        else if (toppingsCost != 0 && pizzaChoice == -1  || drinkType>=1) {
             finalPrint = "\t**ERROR**\nYou should choose a pizza in order to \nadd toppings";
         }
         
+        // when pizza and drink is selected but not topping
+         else if (toppingsCost == 0 && pizzaChoice != -1  && drinkType != -1  ) {
+            finalPrint = "\t**ERROR**\nYou should at least choose one topping \nfor your pizza";
+        }
+        
+         // Pizza exception
         else if (pizzaChoice >= 0  ) {
             finalPrint = PizzaOrder();
         } 
-        
+      
+        // Drink Exception
         else if (drinkType >= 0 ) {
             finalPrint = DrinkOrder();
         } 
-
-        
         
         return finalPrint;
     }
