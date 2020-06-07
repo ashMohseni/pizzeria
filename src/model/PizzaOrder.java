@@ -9,6 +9,7 @@ import java.util.ArrayList;
 public class PizzaOrder {
 
     private int pizzaChoice;
+    private int drinkType;
     private int drinkNum;
     private int pizzaNum;
     private double pizzaCost;
@@ -58,10 +59,18 @@ public class PizzaOrder {
     }
 
     public void setPizza(int pizzaChoice) {
+        if (pizzaChoice == -1) {
+            this.pizzaChoice = pizzaChoice;
+        } else{
         size = PizzaSize.values()[pizzaChoice];
+        }
     }
     public void setDrinkType(int drinkType) {
+        if (!(drinkType >=0) ) {
+            this.drinkType = drinkType;
+        } else{
         drinks = Drinks.values()[drinkType];
+        }
     }
     
     public void setSize(PizzaSize size) {
@@ -166,9 +175,14 @@ public class PizzaOrder {
         String finalPrint = " ";
         
         // when everything has been ordered
-        if (size != null && drinks != null) {
+        if (pizzaChoice >= 0 && drinkType >= 0  ) {
             finalPrint = PizzaOrder() + DrinkOrder();
+        } else if (pizzaChoice >= 0 ) {
+            finalPrint = PizzaOrder();
+        } else if (drinkType >= 0 ) {
+            finalPrint = DrinkOrder();
         }
+        
         
         return finalPrint;
     }
