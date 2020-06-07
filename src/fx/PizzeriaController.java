@@ -3,6 +3,7 @@ package fx;
 
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -14,6 +15,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField; 
 import javafx.scene.control.ToggleGroup;
+import model.Drinks;
 import model.PizzaOrder;
 import model.Toppings;
 
@@ -65,6 +67,7 @@ public class PizzeriaController implements Initializable {
         calculation(); 
         // To clear the arrayList after submiting Confirm button
         order.getToppingList().clear();
+        order.getDrinkList().clear();
     }
 
     @FXML
@@ -77,10 +80,17 @@ public class PizzeriaController implements Initializable {
     
     private int calculation(){
         
+        //Needs to be updated
         if (pizzaSize() >= 0) {
-        PizzaOrder order = new PizzaOrder(pizzaSize(), pizzaNum(), 0, topping());
-        receipt.setText(order.toString(pizzaChoice, pizzaNum(), toppingCalc()) );
+        PizzaOrder order = new PizzaOrder(pizzaSize(), pizzaNum(), topping(), toppingCalc(), null, 0, 0);
+       
+        } 
+        
+        if(drinkType() >= 0){
+        PizzaOrder order = new PizzaOrder(0, 0, topping(), 0, drinks(), drinkCalc(), drinkNum());
+        receipt.setText(order.toString() );
         }
+        
 
         return 0;
     }
@@ -116,6 +126,72 @@ public class PizzeriaController implements Initializable {
         }
         return number;
     }
+    
+      /**
+      * A method that adds the drinks ordered to the arrayList<Drinks> in PizzaOrder class
+      * @return  order.getDrinkList() - an array indicating the ordered drinks
+      */
+        public ArrayList<Drinks> drinks(){
+        if (coke.isSelected()) {
+           order.drink(Drinks.COKE);
+        }
+        if (juice.isSelected()) {
+            order.drink(Drinks.JUICE);
+        }
+        if (chocolate_milk.isSelected()) {
+           order.drink(Drinks.CHOCOLATE_MILK);
+        }
+        return order.getDrinkList();
+    }
+        
+        // To check for exceptions later
+       private int drinkType(){
+        if(coke.isSelected()){
+            drinkChoice = 0;
+        }
+        if (juice.isSelected()) {
+            drinkChoice = 1;
+        }
+        if (chocolate_milk.isSelected()) {
+            drinkChoice = 2;
+        }
+        return drinkChoice;
+    }
+       
+      /**
+      * A method that calculates the total of drinks order and returns "drinkCalc" variable
+      * @return drinkCalc - the sum of drinks
+      */
+       private double drinkCalc(){
+        double drinkCalc = 0.0;
+        
+        if (coke.isSelected()) {
+            drinkCalc +=  drinkNum() * Drinks.COKE.getPrice();
+        }  if (juice.isSelected()){
+             drinkCalc +=  drinkNum() * Drinks.JUICE.getPrice();
+        }  if (chocolate_milk.isSelected()){
+            drinkCalc += drinkNum() * Drinks.CHOCOLATE_MILK.getPrice();
+        } 
+        
+        return drinkCalc;
+    }
+
+       /**
+      * Returns "number" an Integer variable as the number of Drinks being purchased
+      * @return number  
+      */
+    private int drinkNum(){
+        int number = -1;
+        try{
+            number = Integer.parseInt(drinkNum.getText().trim());            
+        }
+        catch(Exception ex){
+            ex.getMessage();
+        }
+        return number;
+    }
+    
+
     
       /**
       * A method that adds the toppings ordered to the arrayList<Topping> in PizzaOrder class

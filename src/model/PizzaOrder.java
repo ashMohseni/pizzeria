@@ -16,25 +16,22 @@ public class PizzaOrder {
     private PizzaSize size;
     private Drinks drinks;
     private ArrayList<Toppings> toppingList = new ArrayList<>();
+    private ArrayList<Drinks> drinkList = new ArrayList<>();
 
     public PizzaOrder() {
     }
-
-    public PizzaOrder(int productchoice, int numProduct, int pizzaordrink,
-            ArrayList<Toppings> toppingList) {
-
-        if (pizzaordrink == 0) {
-            drinksCost = 0;
-            setPizza(productchoice);
-            setPizzaCost(numProduct);
-            setToppingList(toppingList);
-        } else {
-            pizzaCost = 0;
-            setPizzaCost(productchoice);
-            setDrinksCost(numProduct);
-        }
+    
+    public PizzaOrder( int pizzaSize, int pizzaNum,  ArrayList<Toppings> topping, double toppingCalc, 
+            ArrayList<Drinks> drink, double drinkCalc, int drinkNum) {
+         setPizza(pizzaNum);
+         setPizzaCost(pizzaNum);
+         setToppingList(topping);
+         setToppingsCost(toppingCalc);
+         setDrinkList(drink);
+         setDrinksCost(drinkCalc);
+         setDrinkNum(drinkNum);
     }
-
+    
     public void setPizzaCost(int pizzaNum) {
         this.pizzaCost = pizzaCost;
         pizzaCost = pizzaNum * size.getPrice();
@@ -44,16 +41,8 @@ public class PizzaOrder {
         this.drinksCost = drinksCost;
     }
 
-    public Double setToppingsCost() {
-        double toppingsCost = 0;
-        if (toppingList != null) {
-            for (int i = 0; i <= toppingList.size(); i++) {
-                toppingsCost += toppingList.get(i).getPrice();
-            }
-        } else {
-            toppingsCost = 0;
-        }
-        return toppingsCost;
+    public void setToppingsCost(double toppingsCost) {
+         this.toppingsCost  = toppingsCost;
     }
 
     public ArrayList<Toppings> getToppingList() {
@@ -63,7 +52,7 @@ public class PizzaOrder {
     public void setPizza(int pizzaChoice) {
         size = PizzaSize.values()[pizzaChoice];
     }
-
+    
     public void setSize(PizzaSize size) {
         this.size = size;
     }
@@ -79,6 +68,31 @@ public class PizzaOrder {
     public void setToppingList(ArrayList<Toppings> toppingList) {
         this.toppingList = toppingList;
     }
+
+    public void setDrinkList(ArrayList<Drinks> drinkList) {
+        this.drinkList = drinkList;
+    }
+    
+    public void drink(Drinks drinks) {
+        drinkList.add(drinks);
+    }
+
+    public void setDrinkNum(int drinkNum) {
+        this.drinkNum = drinkNum;
+    }
+
+    public void setPizzaNum(int pizzaNum) {
+        this.pizzaNum = pizzaNum;
+    }
+
+    public void setPizzaCost(double pizzaCost) {
+        this.pizzaCost = pizzaCost;
+    }
+
+    public ArrayList<Drinks> getDrinkList() {
+        return drinkList;
+    }
+    
     
       /**
       * A method that calculates the toppings order and returns "toppingOrder" 
@@ -95,17 +109,27 @@ public class PizzaOrder {
         return toppingOrder;
     }
     
-    public String toString(int pizzaChoice, int numberOfPizzas, double toppingCalc) {
-        String pizzaOrder = " ";
-        String finalOrder = " ";
-
-        if (size != null) {
-            pizzaOrder = String.format("Pizzas:\t%40.2f%n\n  \t%s %s%n \nToppings:\t%32.2f%n",
-                    pizzaCost, numberOfPizzas, PizzaSize.values()[pizzaChoice], toppingCalc);
-
+        public String DrinkOrder() {
+        String drinksTitle = " ";
+        String drinksOrder = " ";
+        
+       drinksTitle = String.format("Drinks:\t%40.2f%n ", drinksCost);
+       
+        for (int i = 0; i < drinkList.size(); i++) {
+            drinksOrder += String.format("%n \t%s %s%n",   drinkNum , drinkList.get(i) );
         }
-        finalOrder = pizzaOrder + toppingOrder(numberOfPizzas);
-        return finalOrder;
+        String finalDrink = drinksTitle + drinksOrder;
+        return finalDrink;
+    }
+    
+    public String toString() {
+
+//        if (size != null) {
+//            pizzaOrder += String.format("Pizzas:\t%40.2f%n\n  \t%s %s%n \nToppings:\t%32.2f%n",
+//                    pizzaCost, numberOfPizzas, PizzaSize.values()[pizzaChoice], toppingCalc); 
+//        }
+        
+        return DrinkOrder();
     }
 
 }
