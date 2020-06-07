@@ -84,7 +84,7 @@ public class PizzeriaController implements Initializable {
 //             PizzaOrder order = new PizzaOrder(pizzaSize(), pizzaNum(), topping(), toppingCalc(), drinks(), 0, 0, -1);
 //              receipt.setText(order.toString() );
 //        }
-        
+
          PizzaOrder order = new PizzaOrder(pizzaSize(), pizzaNum(), topping(), toppingCalc(), drinks(), drinkCalc(), drinkNum(), drinkType());
               receipt.setText(order.toString() );
         

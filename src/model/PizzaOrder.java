@@ -178,13 +178,25 @@ public class PizzaOrder {
         String finalPrint = " ";
         
         // when everything has been ordered
-        if (pizzaChoice >= 0 && drinkType >= 0  ) {
+        if (pizzaChoice >= 0 && drinkType >= 0  && toppingsCost != 0 ) {
             finalPrint = PizzaOrder() + DrinkOrder();
-        } else if (pizzaChoice >= 0 && toppingsCost ==0){
-            finalPrint = "\t**ERROR**\nYou should at least choose one topping";
-        } else if (pizzaChoice >= 0 ) {
+        } 
+        
+        //when only pizza is being selected without topping
+        else if (pizzaChoice >= 0 && toppingsCost ==0 && drinkType ==-1){
+            finalPrint = "\t**ERROR**\nYou should at least choose one topping \nfor your pizza";
+        }
+        
+        //when only topping is being selected without pizza
+        else if (toppingsCost != 0 && pizzaChoice == -1  ) {
+            finalPrint = "\t**ERROR**\nYou should choose a pizza in order to \nadd toppings";
+        }
+        
+        else if (pizzaChoice >= 0  ) {
             finalPrint = PizzaOrder();
-        } else if (drinkType >= 0 ) {
+        } 
+        
+        else if (drinkType >= 0 ) {
             finalPrint = DrinkOrder();
         } 
 
