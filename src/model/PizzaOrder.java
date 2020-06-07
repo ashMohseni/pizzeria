@@ -198,7 +198,7 @@ public class PizzaOrder {
             finalPrint = "\t**ERROR**\nYou should choose a pizza in order to \nadd toppings";
         }
         
-        // when pizza and drink is selected but not topping
+        //  when pizza and drink are selected but not topping
          else if (toppingsCost == 0 && pizzaChoice != -1  && drinkType != -1  ) {
             finalPrint = "\t**ERROR**\nYou should at least choose one topping \nfor your pizza";
         }

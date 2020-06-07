@@ -76,6 +76,7 @@ public class PizzeriaController implements Initializable {
 
     @FXML
     private void exit(ActionEvent event) {
+         System.exit(0);
     }
     
     private int calculation(){
