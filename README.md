@@ -27,7 +27,7 @@ Feel free to email me at <ashkan.mhs@gmail.com> and let me know!
 So far the application looks like this👇<br><br>
 
 <p align="center">
-<img src="https://i.imgur.com/4buzlVM.png" alt="Pizzeria app" width="70%" height="70%">
+<img src="https://i.imgur.com/JMl3uz3.png" alt="Pizzeria app" width="70%" height="70%">
 </p>
 
 Customers can order on the left side and view their reciept on the right side :)
