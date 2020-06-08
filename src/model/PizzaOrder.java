@@ -185,7 +185,7 @@ public class PizzaOrder {
         String toppingOrder = " ";
 
         if (size != null) {
-            pizzaOrder += String.format("Pizzas:\t%40.2f%n\n  \t%s %s%n \nToppings:\t%32.2f%n",
+            pizzaOrder += String.format("Pizzas:\t\t\t%40.2f%n\n  \t%s %s%n \nToppings:\t\t\t\t%32.2f%n",
                     pizzaCost, pizzaNum, PizzaSize.values()[pizzaChoice], toppingsCost);
 
             for (int i = 0; i < toppingList.size(); i++) {
@@ -207,7 +207,7 @@ public class PizzaOrder {
         String drinksTitle = " ";
         String drinksOrder = " ";
 
-        drinksTitle = String.format("Drinks:\t%40.2f%n ", drinksCost);
+        drinksTitle = String.format("Drinks:\t\t\t%40.2f%n ", drinksCost);
 
         for (int i = 0; i < drinkList.size(); i++) {
             drinksOrder += String.format("%n \t%s %s%n", drinkNum, drinkList.get(i));
@@ -226,7 +226,7 @@ public class PizzaOrder {
         String drppingsTitle = " ";
         String dippingsOrder = " ";
 
-        drppingsTitle = String.format("\nDippings:\t%40.2f%n ", dippingsCost);
+        drppingsTitle = String.format("\nDippings:\t\t\t%40.2f%n ", dippingsCost);
 
         for (int i = 0; i < dippingList.size(); i++) {
             dippingsOrder += String.format("%n \t%s %s%n", dippingNum, dippingList.get(i));
@@ -248,7 +248,7 @@ public class PizzaOrder {
         double HST = subtotal * tax;
         double total = subtotal + HST;
         
-         finalOrder = String.format("\n=================================%n"
+         finalOrder = String.format("\n===========================%n"
                   + "\nSubtotal:\t\t\t%32.2f%nHST:\t\t\t\t%40.2f%nTotal:\t\t\t%40.2f%n", subtotal, HST, total);
          
         return finalOrder;
