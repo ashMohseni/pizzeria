@@ -7,7 +7,10 @@ import java.util.ArrayList;
  * @author ashkan mohseni
  */
 public class PizzaOrder {
-
+    
+    private int dippingType;
+    private int dippingNum;
+    private int dippingsCost;
     private int pizzaChoice;
     private int drinkType;
     private int drinkNum;
@@ -17,8 +20,10 @@ public class PizzaOrder {
     private double toppingsCost;
     private PizzaSize size;
     private Drinks drinks;
+    private Dippings dippings;
     private ArrayList<Toppings> toppingList = new ArrayList<>();
     private ArrayList<Drinks> drinkList = new ArrayList<>();
+    private ArrayList<Dippings> dippingList = new ArrayList<>();
     double tax = 0.13;
 
     public PizzaOrder() {
@@ -116,6 +121,31 @@ public class PizzaOrder {
     public ArrayList<Drinks> getDrinkList() {
         return drinkList;
     }
+
+    public void setDippingType(int dippingType) {
+               if (!(dippingType >=0) ) {
+            this.dippingType = dippingType;
+        } else{
+        dippings = Dippings.values()[dippingType];
+        }
+    }
+
+    public void setDippingNum(int dippingNum) {
+        this.dippingNum = dippingNum;
+    }
+
+    public void setDippingsCost(int dippingsCost) {
+        this.dippingsCost = dippingsCost;
+    }
+
+    public void setDippingList(ArrayList<Dippings> dippingList) {
+        this.dippingList = dippingList;
+    }
+
+    public void setDippings(Dippings dippings) {
+        dippingList.add(dippings);
+    }
+    
 
     /**
      * A method that calculates the toppings order and returns "toppingOrder"

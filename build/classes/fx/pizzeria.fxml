@@ -297,17 +297,17 @@
                            <children>
                               <HBox spacing="30.0">
                                  <children>
-                                    <RadioButton fx:id="coke1" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="Ranch">
+                                    <RadioButton fx:id="ranch" mnemonicParsing="false" prefHeight="30.0" prefWidth="129.0" text="Ranch">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton fx:id="juice1" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Garlic">
+                                    <RadioButton fx:id="garlic" mnemonicParsing="false" prefHeight="30.0" prefWidth="114.0" text="Garlic">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton fx:id="chocolate_milk1" mnemonicParsing="false" prefHeight="30.0" prefWidth="191.0" text="Marinara">
+                                    <RadioButton fx:id="marinara" mnemonicParsing="false" prefHeight="30.0" prefWidth="191.0" text="Marinara">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
@@ -316,17 +316,17 @@
                               </HBox>
                               <HBox spacing="30.0">
                                  <children>
-                                    <RadioButton fx:id="coke11" mnemonicParsing="false" prefHeight="30.0" prefWidth="108.0" text="BBQ">
+                                    <RadioButton fx:id="bbq" mnemonicParsing="false" prefHeight="30.0" prefWidth="108.0" text="BBQ">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton fx:id="juice11" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" text="Hot">
+                                    <RadioButton fx:id="hot" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" text="Hot">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton fx:id="chocolate_milk11" mnemonicParsing="false" prefHeight="30.0" prefWidth="133.0" text="chipotle">
+                                    <RadioButton fx:id="chipotle" mnemonicParsing="false" prefHeight="30.0" prefWidth="133.0" text="Chipotle">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
@@ -338,7 +338,7 @@
                               </HBox>
                            </children>
                         </VBox>
-                        <TextField fx:id="drinkNum1" prefHeight="41.0" prefWidth="428.0" promptText="Number of Dippings">
+                        <TextField fx:id="dippingNum" prefHeight="41.0" prefWidth="428.0" promptText="Number of Dippings">
                            <VBox.margin>
                               <Insets right="60.0" top="20.0" />
                            </VBox.margin>

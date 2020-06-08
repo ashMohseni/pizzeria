@@ -15,6 +15,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField; 
 import javafx.scene.control.ToggleGroup;
+import model.Dippings;
 import model.Drinks;
 import model.PizzaOrder;
 import model.Toppings;
@@ -53,6 +54,13 @@ public class PizzeriaController implements Initializable {
     @FXML private RadioButton pepsi;
     @FXML private RadioButton fanta;
     @FXML private RadioButton red_bull;
+    @FXML private RadioButton ranch;
+    @FXML private RadioButton garlic;
+    @FXML private RadioButton marinara;
+    @FXML private RadioButton bbq;
+    @FXML private RadioButton hot;
+    @FXML private RadioButton chipotle;
+    @FXML private TextField dippingNum;
     
     // an int variable used by pizzaSize() method to access the PizzaSize enums
     private int pizzaChoice = -1;
@@ -294,5 +302,5 @@ public class PizzeriaController implements Initializable {
         return toppingCalc;
     }
     
-    
+   
 }
