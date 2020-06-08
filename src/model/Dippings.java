@@ -6,12 +6,12 @@ package model;
  */
 public enum Dippings {
 
-    RANCH("Cheese", 1.50),
-    GARLIC("Pepperoni", 1.50),
-    MARINARA("Mushrooms", 1.50),
-    BBQ("Tomato", 1.50),
-    HOT("Bacon", 1.50),
-    CHIPOTLE("Onion", 1.50);
+    RANCH("Ranch", 1.50),
+    GARLIC("Garlic", 1.50),
+    MARINARA("Marinara", 1.50),
+    BBQ("BBQ", 1.50),
+    HOT("Hot", 1.50),
+    CHIPOTLE("Chipotle", 1.50);
 
     private String name;
     private Double price;
