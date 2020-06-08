@@ -216,6 +216,26 @@ public class PizzaOrder {
         return finalDrink;
     }
     
+    /**
+     * A method that calculates the Dips ordered and returns "finalDip"
+     * variable
+     *
+     * @return finalDip- the sum of dips
+     */
+        public String DippingsOrder() {
+        String drppingsTitle = " ";
+        String dippingsOrder = " ";
+
+        drppingsTitle = String.format("\nDippings:\t%40.2f%n ", dippingsCost);
+
+        for (int i = 0; i < dippingList.size(); i++) {
+            dippingsOrder += String.format("%n \t%s %s%n", dippingNum, dippingList.get(i));
+        }
+        String finalDip = drppingsTitle + dippingsOrder;
+        
+        return finalDip;
+    }
+    
      /**
      * A method that calculates the subtotal + HST + Total  and returns "finalOrder"
      * variable
@@ -224,7 +244,7 @@ public class PizzaOrder {
      */
         public String FinalOrder() {
         String finalOrder = " ";
-        double subtotal = pizzaCost + drinksCost + toppingsCost;
+        double subtotal = pizzaCost + drinksCost + toppingsCost + dippingsCost;
         double HST = subtotal * tax;
         double total = subtotal + HST;
         
@@ -245,7 +265,7 @@ public class PizzaOrder {
         
         // when everything has been ordered
         if (pizzaChoice >= 0 && drinkType >= 0  && toppingsCost != 0 ) {
-            finalPrint = PizzaOrder() + DrinkOrder() + FinalOrder();
+            finalPrint = PizzaOrder() + DrinkOrder()  + DippingsOrder() + FinalOrder();
         } 
         
         //when only pizza is being selected without topping
@@ -272,6 +292,10 @@ public class PizzaOrder {
         else if (drinkType >= 0 ) {
             finalPrint = DrinkOrder() + FinalOrder();
         } 
+        
+        else if(dippingType >= 0){
+            finalPrint = DippingsOrder() + FinalOrder();
+        }
         
         return finalPrint;
     }

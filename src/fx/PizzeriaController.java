@@ -84,6 +84,7 @@ public class PizzeriaController implements Initializable {
         // To clear the arrayList after submiting Confirm button
         order.getToppingList().clear();
         order.getDrinkList().clear();
+        order.getDippingList().clear();
     }
 
     @FXML
