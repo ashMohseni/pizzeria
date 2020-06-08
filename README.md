@@ -7,6 +7,7 @@
 
 To be used by customers in pizza places for building any kind of pizza they prefer to!
 
+
 <h2>Why Pizzeria could be useful? 🤷‍♂️ </h2>
 
 - Less code is needed compared to other **GUI** frameworks.
@@ -27,7 +28,7 @@ Feel free to email me at <ashkan.mhs@gmail.com> and let me know!
 So far the application looks like this👇<br><br>
 
 <p align="center">
-<img src="https://i.imgur.com/JMl3uz3.png" alt="Pizzeria app" width="70%" height="70%">
+<img src="https://i.imgur.com/fcgn4Ys.png" alt="Pizzeria app" width="70%" height="70%">
 </p>
 
 Customers can order on the left side and view their reciept on the right side :)
@@ -35,6 +36,7 @@ Customers can order on the left side and view their reciept on the right side :)
 
 <h2>So what is the goal?! 🌟</h2>
 <h4>The goal for this app is to have multiple scenes with a more realistic design !! 🖥 </h4><br>
+
 
 
 <hr>
