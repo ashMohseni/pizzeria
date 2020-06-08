@@ -10,7 +10,7 @@ public class PizzaOrder {
     
     private int dippingType;
     private int dippingNum;
-    private int dippingsCost;
+    private double dippingsCost;
     private int pizzaChoice;
     private int drinkType;
     private int drinkNum;
@@ -30,7 +30,9 @@ public class PizzaOrder {
     }
 
     public PizzaOrder(int pizzaSize, int pizzaNum, ArrayList<Toppings> topping, double toppingCalc,
-            ArrayList<Drinks> drink, double drinkCalc, int drinkNum, int drinkType) {
+            ArrayList<Drinks> drink, double drinkCalc, int drinkNum, int drinkType, 
+            ArrayList<Dippings> dipping, double dippingCalc, int dippingNum, int dippingType) {
+        
         setPizza(pizzaSize);
         setPizzaChoice(pizzaSize);
         setPizzaCost(pizzaNum);
@@ -41,6 +43,11 @@ public class PizzaOrder {
         setDrinksCost(drinkCalc);
         setDrinkNum(drinkNum);
         setDrinkType(drinkType);
+        setDippingList(dipping);
+        setDippingsCost(dippingCalc);
+        setDippingNum(dippingNum);
+        setDippingType(dippingType);
+        
     }
 
     public void setPizzaCost(int pizzaNum) { 
@@ -134,7 +141,7 @@ public class PizzaOrder {
         this.dippingNum = dippingNum;
     }
 
-    public void setDippingsCost(int dippingsCost) {
+    public void setDippingsCost(double dippingsCost) {
         this.dippingsCost = dippingsCost;
     }
 
@@ -144,6 +151,10 @@ public class PizzaOrder {
 
     public void setDippings(Dippings dippings) {
         dippingList.add(dippings);
+    }
+
+    public ArrayList<Dippings> getDippingList() {
+        return dippingList;
     }
     
 

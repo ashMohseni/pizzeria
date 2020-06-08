@@ -65,6 +65,7 @@ public class PizzeriaController implements Initializable {
     // an int variable used by pizzaSize() method to access the PizzaSize enums
     private int pizzaChoice = -1;
     private int drinkChoice = -1;
+    private int dippingChoice = -1;
     
     // instance of PizzaOrder class
     PizzaOrder order = new PizzaOrder(); 
@@ -114,7 +115,9 @@ public class PizzeriaController implements Initializable {
 //              receipt.setText(order.toString() );
 //        }
 
-         PizzaOrder order = new PizzaOrder(pizzaSize(), pizzaNum(), topping(), toppingCalc(), drinks(), drinkCalc(), drinkNum(), drinkType());
+         PizzaOrder order = new PizzaOrder(pizzaSize(), pizzaNum(), topping(), toppingCalc(), drinks(), drinkCalc(), 
+                 drinkNum(), drinkType(), dippings(), dippingCalc(), dippingNum(), dippingType());
+         
               receipt.setText(order.toString() );
         
         return 0;
@@ -301,6 +304,91 @@ public class PizzeriaController implements Initializable {
         
         return toppingCalc;
     }
+    
+    public ArrayList<Dippings> dippings(){
+        if (ranch.isSelected()) {
+           order.setDippings(Dippings.RANCH);
+        }
+        if (garlic.isSelected()) {
+           order.setDippings(Dippings.GARLIC);
+        }
+        if (marinara.isSelected()) {
+           order.setDippings(Dippings.MARINARA);
+        }
+        if (bbq.isSelected()) {
+           order.setDippings(Dippings.BBQ);
+        }
+        if (hot.isSelected()) {
+           order.setDippings(Dippings.HOT);
+        }
+        if (chipotle.isSelected()) {
+           order.setDippings(Dippings.CHIPOTLE);
+        }
+        return order.getDippingList();
+    }
+        
+       private int dippingType(){
+        if(ranch.isSelected()){
+            dippingChoice = 0;
+        }
+        if (garlic.isSelected()) {
+            dippingChoice = 1;
+        }
+        if (marinara.isSelected()) {
+            dippingChoice = 2;
+        }
+        if (bbq.isSelected()) {
+            dippingChoice = 3;
+        }
+        if (hot.isSelected()) {
+            dippingChoice = 4;
+        }
+        if (chipotle.isSelected()) {
+            dippingChoice = 5;
+        }
+        return dippingChoice;
+    }
+       
+      /**
+      * A method that calculates the total of dips order and returns "dippingCalc" variable
+      * @return DippingCalc - the sum of dips
+      */
+       private double dippingCalc(){
+        double dippingCalc = 0.0;
+        
+        if (ranch.isSelected()) {
+            dippingCalc +=  dippingNum() * Dippings.RANCH.getPrice();
+        }  if (garlic.isSelected()){
+             dippingCalc +=  dippingNum() * Dippings.GARLIC.getPrice();
+        }  if (marinara.isSelected()){
+            dippingCalc += dippingNum() * Dippings.MARINARA.getPrice();
+        } if (bbq.isSelected()){
+            dippingCalc += dippingNum() * Dippings.BBQ.getPrice();
+        } if (hot.isSelected()){
+            dippingCalc += dippingNum() * Dippings.HOT.getPrice();
+        } if (chipotle.isSelected()){
+            dippingCalc += dippingNum() * Dippings.CHIPOTLE.getPrice();
+        } 
+        
+        return dippingCalc;
+    }
+
+       /**
+      * Returns "number" an Integer variable as the number of dips being purchased
+      * @return number  
+      */
+    private int dippingNum(){
+        int number = -1;
+        try{
+            number = Integer.parseInt(dippingNum.getText().trim());            
+        }
+        catch(Exception ex){
+            ex.getMessage();
+        }
+        return number;
+    }
+    
+    
     
    
 }
