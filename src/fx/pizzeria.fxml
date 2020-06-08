@@ -172,22 +172,22 @@
                               </VBox>
                               <VBox spacing="10.0">
                                  <children>
-                                    <CheckBox fx:id="cheese1" mnemonicParsing="false" prefHeight="24.0" prefWidth="102.0" text="NEW1">
+                                    <CheckBox fx:id="tomato" mnemonicParsing="false" prefHeight="30.0" prefWidth="163.0" text="Tomato">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
                                     </CheckBox>
-                                    <CheckBox fx:id="pepperoni1" mnemonicParsing="false" prefHeight="24.0" prefWidth="153.0" text="NEW2">
+                                    <CheckBox fx:id="bacon" mnemonicParsing="false" prefHeight="24.0" prefWidth="153.0" text="Bacon">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
                                     </CheckBox>
-                                    <CheckBox fx:id="mushrooms1" mnemonicParsing="false" prefHeight="27.0" prefWidth="143.0" text="NEW3">
+                                    <CheckBox fx:id="onion" mnemonicParsing="false" prefHeight="27.0" prefWidth="143.0" text="Onion">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
                                     </CheckBox>
-                                    <CheckBox fx:id="olives1" mnemonicParsing="false" prefHeight="24.0" prefWidth="104.0" text="NEW4">
+                                    <CheckBox fx:id="pineapple" mnemonicParsing="false" prefHeight="30.0" prefWidth="176.0" text="Pineapple">
                                        <font>
                                           <Font size="22.0" />
                                        </font>

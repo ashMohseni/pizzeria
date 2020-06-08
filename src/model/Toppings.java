@@ -10,6 +10,10 @@ public enum Toppings {
      CHEESE("Cheese",1.00),
      PEPPERONI("Pepperoni",1.75),
      MUSHROOMS("Mushrooms",1.25),
+     TOMATO("Tomato",1.25),
+     BACON("Bacon",1.75),
+     ONION("Onion",1.5),
+     PINEAPPLE("Pineapple",1.75),
      OLIVES("Olives",1.50);
          
     private String name;
