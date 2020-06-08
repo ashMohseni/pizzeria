@@ -39,7 +39,7 @@ public class PizzeriaController implements Initializable {
     @FXML private CheckBox olives;
     @FXML private RadioButton coke;
     @FXML private RadioButton juice;
-    @FXML private RadioButton chocolate_milk;
+    @FXML private RadioButton seven_up;
     @FXML private TextField drinkNum;
     @FXML private TextArea receipt;
     @FXML private Button confirm;
@@ -50,6 +50,9 @@ public class PizzeriaController implements Initializable {
     @FXML private CheckBox bacon;
     @FXML private CheckBox onion;
     @FXML private CheckBox pineapple;
+    @FXML private RadioButton pepsi;
+    @FXML private RadioButton fanta;
+    @FXML private RadioButton red_bull;
     
     // an int variable used by pizzaSize() method to access the PizzaSize enums
     private int pizzaChoice = -1;
@@ -86,7 +89,7 @@ public class PizzeriaController implements Initializable {
         mushrooms.setSelected(false);
         coke.setSelected(false);
         juice.setSelected(false);
-        chocolate_milk.setSelected(false);
+        seven_up.setSelected(false);
         pizzaNum.setText("");
         drinkNum.setText("");
     }
@@ -152,8 +155,17 @@ public class PizzeriaController implements Initializable {
         if (juice.isSelected()) {
             order.drink(Drinks.JUICE);
         }
-        if (chocolate_milk.isSelected()) {
-           order.drink(Drinks.CHOCOLATE_MILK);
+        if (seven_up.isSelected()) {
+           order.drink(Drinks.SEVEN_UP);
+        }
+        if (pepsi.isSelected()) {
+           order.drink(Drinks.PEPSI);
+        }
+        if (fanta.isSelected()) {
+           order.drink(Drinks.FANTA);
+        }
+        if (red_bull.isSelected()) {
+           order.drink(Drinks.RED_BULL);
         }
         return order.getDrinkList();
     }
@@ -166,8 +178,17 @@ public class PizzeriaController implements Initializable {
         if (juice.isSelected()) {
             drinkChoice = 1;
         }
-        if (chocolate_milk.isSelected()) {
+        if (seven_up.isSelected()) {
             drinkChoice = 2;
+        }
+        if (pepsi.isSelected()) {
+            drinkChoice = 3;
+        }
+        if (fanta.isSelected()) {
+            drinkChoice = 4;
+        }
+        if (red_bull.isSelected()) {
+            drinkChoice = 5;
         }
         return drinkChoice;
     }
@@ -183,8 +204,14 @@ public class PizzeriaController implements Initializable {
             drinkCalc +=  drinkNum() * Drinks.COKE.getPrice();
         }  if (juice.isSelected()){
              drinkCalc +=  drinkNum() * Drinks.JUICE.getPrice();
-        }  if (chocolate_milk.isSelected()){
-            drinkCalc += drinkNum() * Drinks.CHOCOLATE_MILK.getPrice();
+        }  if (seven_up.isSelected()){
+            drinkCalc += drinkNum() * Drinks.SEVEN_UP.getPrice();
+        } if (pepsi.isSelected()){
+            drinkCalc += drinkNum() * Drinks.PEPSI.getPrice();
+        } if (fanta.isSelected()){
+            drinkCalc += drinkNum() * Drinks.FANTA.getPrice();
+        } if (red_bull.isSelected()){
+            drinkCalc += drinkNum() * Drinks.RED_BULL.getPrice();
         } 
         
         return drinkCalc;
