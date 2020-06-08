@@ -46,6 +46,10 @@ public class PizzeriaController implements Initializable {
     @FXML private Button cancel;
     @FXML private Button exit;
     @FXML private ToggleGroup togglepizzas;
+    @FXML private CheckBox tomato;
+    @FXML private CheckBox bacon;
+    @FXML private CheckBox onion;
+    @FXML private CheckBox pineapple;
     
     // an int variable used by pizzaSize() method to access the PizzaSize enums
     private int pizzaChoice = -1;
@@ -53,7 +57,7 @@ public class PizzeriaController implements Initializable {
     
     // instance of PizzaOrder class
     PizzaOrder order = new PizzaOrder(); 
-    
+
     /**
      * Initializes the controller class.
      */
@@ -220,6 +224,18 @@ public class PizzeriaController implements Initializable {
         if (olives.isSelected()) {
             order.topping(Toppings.OLIVES);
         } 
+        if (tomato.isSelected()) {
+            order.topping(Toppings.TOMATO);
+        }
+        if (bacon.isSelected()) {
+            order.topping(Toppings.BACON);
+        }
+        if (onion.isSelected()) {
+            order.topping(Toppings.ONION);
+        }
+        if (pineapple.isSelected()) {
+            order.topping(Toppings.PINEAPPLE);
+        }
         return order.getToppingList();
     }
     
@@ -238,6 +254,14 @@ public class PizzeriaController implements Initializable {
             toppingCalc += pizzaNum() * Toppings.MUSHROOMS.getPrice();
         }  if (olives.isSelected()){
             toppingCalc += pizzaNum() * Toppings.OLIVES.getPrice();
+        }  if (tomato.isSelected()){
+            toppingCalc += pizzaNum() * Toppings.TOMATO.getPrice();
+        }  if (bacon.isSelected()){
+            toppingCalc += pizzaNum() * Toppings.BACON.getPrice();
+        }  if (onion.isSelected()){
+            toppingCalc += pizzaNum() * Toppings.ONION.getPrice();
+        }  if (pineapple.isSelected()){
+            toppingCalc += pizzaNum() * Toppings.PINEAPPLE.getPrice();
         }
         
         return toppingCalc;
