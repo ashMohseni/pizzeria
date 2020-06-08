@@ -97,9 +97,23 @@ public class PizzeriaController implements Initializable {
         pepperoni.setSelected(false);
         olives.setSelected(false);
         mushrooms.setSelected(false);
+        tomato.setSelected(false);
+        bacon.setSelected(false);
+        onion.setSelected(false);
+        pineapple.setSelected(false);
         coke.setSelected(false);
         juice.setSelected(false);
         seven_up.setSelected(false);
+        pepsi.setSelected(false);
+        fanta.setSelected(false);
+        red_bull.setSelected(false);
+        ranch.setSelected(false);
+        garlic.setSelected(false);
+        marinara.setSelected(false);
+        bbq.setSelected(false);
+        hot.setSelected(false);
+        chipotle.setSelected(false);
+        dippingNum.setText("");
         pizzaNum.setText("");
         drinkNum.setText("");
     }
