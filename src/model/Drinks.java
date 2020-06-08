@@ -9,10 +9,10 @@ public enum Drinks {
      
      COKE("Coke",1.25),
      JUICE("Juice",1.95),
+     SEVEN_UP("Seven Up",2.25),
      PEPSI("Pepsi",1.95),
      FANTA("Fanta",1.95),
-     RED_BULL("Red bull",1.95),
-     SEVEN_UP("Seven Up",2.25);
+     RED_BULL("Red bull",1.95);
      
     private String name;
     private Double price;
