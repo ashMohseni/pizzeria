@@ -1,19 +1,12 @@
 /*
  * Empty Stylesheet file.
  */
-
-.mainFxmlClass {
-
-}
-
-
-
 #title{
      -fx-font-family: "Bebas Neue";
      -fx-font-size : 70px;
 }
 
-#pizza_title, #toppings_title, #drinks_title, #dippings_title, #receipt_title{ 
+#pizza_title, #toppings_title, #drinks_title, #dippings_title, #receipt_title{
    -fx-font-family: "Acme";
 }
 
@@ -25,4 +18,3 @@
     -fx-font-family: "Abel";
     -fx-font-size : 21px;
 }
-
