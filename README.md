@@ -16,14 +16,6 @@ To be used by customers in pizza places for building any kind of pizza they pref
 - **JavaFX** provides a **rich** graphical user interface.
 
 
-<h2>Is this all? ⁉️</h2>
-<h4> Well NO!! Moreover I'm going to add more features to this app and make it more user-friendly👨‍💻</h4>
-
-If at any point, you decided that you want to **help** and be a part of this project.
-
-Feel free to email me at <ashkan.mhs@gmail.com> and let me know!
-
-
 <h2>How does Pizzeria look like at the moment?🧐</h2>
 So far the application looks like this👇<br><br>
 
@@ -36,13 +28,6 @@ Customers can **order** on the left side and **view** their reciept on the right
 
 <h2>So what is the goal?! 🌟</h2>
 <h4>The goal for this app is to have multiple scenes with a more realistic design !! 🖥 </h4><br>
-
-
-
-<hr>
-If you wanted to collab on some projects together..
-
-Feel free to contact me at <ashkan.mhs@gmail.com> !!! 🚀
 
 
  
