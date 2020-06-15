@@ -1,4 +1,4 @@
-package fx;
+package fx.login;
 
 import java.awt.Desktop;
 import java.io.FileNotFoundException;
@@ -83,7 +83,7 @@ public class SignUpController implements Initializable {
         } else {
             Alert alert = new Alert(AlertType.NONE, "\nAccount created successfully!", OK);
             DialogPane dialogPane = alert.getDialogPane();
-            dialogPane.getStylesheets().add(getClass().getResource("pizzeria.css").toExternalForm());
+            dialogPane.getStylesheets().add(getClass().getResource("../pizzeria.css").toExternalForm());
             dialogPane.getStyleClass().add("myDialog");
             alert.show();
         }
@@ -94,7 +94,7 @@ public class SignUpController implements Initializable {
     private Alert alert(String AlertText) {
         Alert alert = new Alert(ERROR, AlertText, OK);
         DialogPane dialogPane = alert.getDialogPane();
-        dialogPane.getStylesheets().add(getClass().getResource("pizzeria.css").toExternalForm());
+        dialogPane.getStylesheets().add(getClass().getResource("../pizzeria.css").toExternalForm());
         dialogPane.getStyleClass().add("myDialog");
         alert.show();
         return alert;

@@ -1,4 +1,4 @@
-package fx;
+package fx.login;
 
 import java.awt.Desktop;
 import java.io.IOException;
@@ -60,9 +60,9 @@ public class LoginController implements Initializable {
             String storedPass = info.getUserpass().get(user);
             // If password is right
             if (storedPass.equals(pass)) {
-                Parent signUp = FXMLLoader.load(getClass().getResource("pizzeria.fxml"));
+                Parent signUp = FXMLLoader.load(getClass().getResource("../pizzeria.fxml"));
                 Scene scene = new Scene(signUp, 1500, 870);
-                scene.getStylesheets().add(this.getClass().getResource("pizzeria.css").toExternalForm());
+                scene.getStylesheets().add(this.getClass().getResource("../pizzeria.css").toExternalForm());
 
                 Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 window.setScene(scene);
@@ -87,7 +87,7 @@ public class LoginController implements Initializable {
 
         Parent signUp = FXMLLoader.load(getClass().getResource("signUp.fxml"));
         Scene scene = new Scene(signUp, 1500, 870);
-        scene.getStylesheets().add(this.getClass().getResource("pizzeria.css").toExternalForm());
+        scene.getStylesheets().add(this.getClass().getResource("../pizzeria.css").toExternalForm());
 
         //This line gets the stage information
         Stage window = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -102,7 +102,7 @@ public class LoginController implements Initializable {
     private Alert alert(String alertText) {
         Alert alert = new Alert(ERROR, alertText, OK);
         DialogPane dialogPane = alert.getDialogPane();
-        dialogPane.getStylesheets().add(getClass().getResource("pizzeria.css").toExternalForm());
+        dialogPane.getStylesheets().add(getClass().getResource("../pizzeria.css").toExternalForm());
         dialogPane.getStyleClass().add("myDialog");
         alert.show();
         return alert;

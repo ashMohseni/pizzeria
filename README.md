@@ -11,7 +11,7 @@ To be used by customers in pizza places for building any kind of pizza they pref
 <h2>Why Pizzeria could be useful? 🤷‍♂️ </h2>
 
 - Less code is needed compared to other **GUI** frameworks.
-	- Also that means **faster** speed !
+    - Also that means **faster** speed !
 - Responsive application design with flexible layouts.
 - **JavaFX** provides a **rich** graphical user interface.
 

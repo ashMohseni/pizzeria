@@ -13,9 +13,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="1150.0" stylesheets="@pizzeria.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.SignUpController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="1150.0" stylesheets="@../pizzeria.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.login.SignUpController">
    <center>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@pizzeria.css" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../pizzeria.css" BorderPane.alignment="CENTER">
          <children>
             <Label layoutX="629.0" layoutY="163.0" text="Sign up Page" textFill="WHITE">
                <font>
@@ -111,7 +111,7 @@
          <children>
             <ImageView fx:id="gitHub" fitHeight="40.0" fitWidth="46.0" layoutX="707.0" layoutY="30.0" onMouseClicked="#git" onMouseEntered="#gitEffect" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../resources/GitHub-Mark-Light-120px-plus.png" />
+                  <Image url="@../../resources/GitHub-Mark-Light-120px-plus.png" />
                </image>
             </ImageView>
             <Label layoutX="666.0" layoutY="75.0" prefHeight="27.0" prefWidth="157.0" text="Created by Ash" textFill="WHITE">
