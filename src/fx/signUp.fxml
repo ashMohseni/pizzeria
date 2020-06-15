@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="1150.0" stylesheets="@pizzeria.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.SignUpController">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@pizzeria.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="629.0" layoutY="163.0" text="Sign up Page" textFill="WHITE">
+               <font>
+                  <Font name="Bebas Neue Regular" size="47.0" />
+               </font>
+            </Label>
+            <VBox layoutX="537.0" layoutY="199.0" prefHeight="660.0" prefWidth="371.0" spacing="20.0">
+               <children>
+                  <VBox id="main-VBox" prefHeight="442.0" prefWidth="281.0">
+                     <children>
+                        <VBox prefHeight="401.0" prefWidth="357.0" spacing="7.0">
+                           <children>
+                              <Label id="user-title" text="Username" />
+                              <TextField fx:id="username" prefHeight="41.0" prefWidth="334.0" />
+                              <Label id="user-title" text="Email address">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <TextField fx:id="email" prefHeight="43.0" prefWidth="353.0" />
+                              <Label id="user-title" text="Password">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <PasswordField fx:id="password" prefHeight="43.0" prefWidth="334.0">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </PasswordField>
+                              <Label lineSpacing="2.0" prefHeight="44.0" prefWidth="359.0" text="Make sure it's at least 8 characters including a number,&#10;a uppercase letter and a lowercase letter. ">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin></Label>
+                              <Button id="sign-in" mnemonicParsing="false" onAction="#create_account" prefHeight="43.0" prefWidth="334.0" text="Create account">
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="14.0" right="5.0" top="35.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox id="main-VBox" prefHeight="53.0" prefWidth="371.0">
+                     <children>
+                        <HBox prefHeight="89.0" prefWidth="371.0">
+                           <children>
+                              <Label lineSpacing="2.0" prefHeight="23.0" prefWidth="262.0" text="If you have an account.">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="4.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label id="sign-up" lineSpacing="2.0" onMouseClicked="#sign_in" prefHeight="23.0" prefWidth="228.0" text="Sign in from here.">
+                                 <font>
+                                    <Font size="21.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="-4.0" top="3.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="14.0" right="5.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="gitHub" fitHeight="40.0" fitWidth="46.0" layoutX="707.0" layoutY="30.0" onMouseClicked="#git" onMouseEntered="#gitEffect" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/GitHub-Mark-Light-120px-plus.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="666.0" layoutY="75.0" prefHeight="27.0" prefWidth="157.0" text="Created by Ash" textFill="WHITE">
+               <font>
+                  <Font name="Abel Regular" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

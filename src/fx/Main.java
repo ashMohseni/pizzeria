@@ -22,7 +22,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         window = primaryStage;
-        Pane root2 = FXMLLoader.load(getClass().getResource("pizzeria.fxml"));
+        Pane root2 = FXMLLoader.load(getClass().getResource("login.fxml"));
         Font.loadFont("file:resources.Fonts/BebasNeue-Regular.ttf", 120);
         Font.loadFont("file:resources.Fonts/OpenSans-Regular-Regular.ttf", 120);
         Font.loadFont("file:resources.Fonts/OdibeeSans-Regular.ttf", 120);

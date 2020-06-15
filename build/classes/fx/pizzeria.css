@@ -18,3 +18,92 @@
     -fx-font-family: "Abel";
     -fx-font-size : 21px;
 }
+
+
+.root{
+    -fx-background-image: url("../resources/more-trees.jpg");
+    -fx-background-size: cover;
+}
+
+#sign-in{
+    -fx-background-color: rgba(74, 148, 53, 0.8); 
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+    -fx-font-size: 18;
+}
+#sign-in:hover{
+    -fx-background-color: #7cd164; 
+    -fx-background-color: rgba(74, 148, 53, 0.9); 
+
+}
+
+#user-title, #pass-title{
+    -fx-text-fill: black;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+}
+
+
+#sign-up{
+    -fx-text-fill: #6b9ded;
+    -fx-font-size: 18;
+}
+
+#sign-up:hover{
+    -fx-text-fill: #4287f5;
+}
+
+#main-VBox{
+    -fx-background-color: rgba(255,255,255, 0.8); 
+    -fx-background-radius: 6;
+
+}
+
+#login-title{
+     -fx-font-size: 40; 
+}
+
+ .dialog-pane{
+  -fx-background-image: url("../resources/alert.jpg");
+   -fx-background-size: cover; 
+ }
+
+/**Costumization of The Bar where the buttons are located**/
+.dialog-pane > .button-bar > .container {
+  -fx-background-image: url("../resources/alert.jpg");
+   -fx-background-size: cover;
+}
+
+.dialog-pane > .content.label {
+   -fx-padding: 0.7em 0.7em 0.7em 0.7em;
+   -fx-background-image: url("../resources/alert.jpg");
+   -fx-background-size: cover;
+   -fx-text-fill:black;
+   -fx-font-size:17.0px;
+}
+
+/**Costumization of DialogPane Header**/
+.dialog-pane:header .header-panel {
+  -fx-background-image: url("../resources/alert.jpg");
+   -fx-background-size: cover;
+}
+
+.dialog-pane:header .header-panel .label{
+  -fx-background-image: url("../resources/alert.jpg");
+   -fx-background-size: cover; 
+  -fx-text-fill:black;
+  -fx-font-size:30.0px;
+}
+
+
+/**Costumization of Buttons**/
+.dialog-pane .button{
+    -fx-background-color: rgba(74, 148, 53, 0.8); 
+   -fx-text-fill:white;
+   -fx-wrap-text: true; 
+   -fx-cursor:hand;
+ }
+
+.dialog-pane .button:hover{     
+  -fx-background-color: rgba(74, 148, 53, 0.9);  
+ }

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="868.0" prefWidth="1220.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fx.LoginController">
+   <center>
+      <AnchorPane prefHeight="857.0" prefWidth="1220.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="TOP_LEFT" layoutX="629.0" layoutY="139.0" onMouseClicked="#sign_up" prefHeight="61.0" prefWidth="198.0" stylesheets="@pizzeria.css" text="Sign in Page" textFill="WHITE">
+               <font>
+                  <Font name="Bebas Neue Regular" size="47.0" />
+               </font>
+            </Label>
+            <VBox layoutX="551.0" layoutY="174.0" spacing="30.0">
+               <children>
+                  <VBox id="main-VBox">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <VBox id="main-VBox" prefHeight="294.0" prefWidth="351.0" spacing="20.0">
+                     <children>
+                        <Label id="user-title" prefHeight="26.0" prefWidth="280.0" text="Username " textFill="WHITE">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="username" prefHeight="40.0" prefWidth="282.0">
+                           <VBox.margin>
+                              <Insets top="-10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </TextField>
+                        <HBox>
+                           <children>
+                              <Label id="pass-title" text="Password">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <PasswordField fx:id="password" prefHeight="42.0" prefWidth="297.0">
+                           <VBox.margin>
+                              <Insets top="-10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="9.0" />
+                           </font>
+                        </PasswordField>
+                        <Button id="sign-in" fx:id="sign_in" mnemonicParsing="false" onAction="#Sign_in" prefHeight="41.0" prefWidth="364.0" stylesheets="@pizzeria.css" text="Sign in">
+                           <VBox.margin>
+                              <Insets top="17.0" />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </VBox>
+                  <VBox id="main-VBox">
+                     <children>
+                        <HBox prefHeight="66.0" prefWidth="307.0">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <Label id="pass-title" text="Need an account?">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <Label id="sign-up" fx:id="sign_up" alignment="BOTTOM_RIGHT" onMouseClicked="#sign_up" prefHeight="24.0" prefWidth="109.0" stylesheets="@pizzeria.css" text="Sign Up now.">
+                                 <font>
+                                    <Font size="26.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="2.0" left="-2.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <stylesheets>
+      <URL value="@pizzeria.css" /> 
+   </stylesheets>
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="gitHub" fitHeight="40.0" fitWidth="46.0" layoutX="708.0" layoutY="27.0" onMouseClicked="#git" onMouseEntered="#gitEffect" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/GitHub-Mark-Light-120px-plus.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="668.0" layoutY="73.0" prefHeight="27.0" prefWidth="157.0" text="Created by Ash" textFill="WHITE">
+               <font>
+                  <Font name="Abel Regular" size="21.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
