@@ -56,7 +56,7 @@
                         <Image url="@../resources/white-background.jpg" />
                      </image>
                   </ImageView>
-                  <VBox layoutX="10.0" layoutY="119.0" prefHeight="275.0" prefWidth="489.0" spacing="10.0" style="-fx-border-color: black; -fx-border-radius: 9; -fx-border-width: 3;" AnchorPane.leftAnchor="10.0">
+                  <VBox layoutX="10.0" layoutY="119.0" prefHeight="275.0" prefWidth="489.0" spacing="10.0" style="-fx-border-color: black; -fx-border-radius: 6; -fx-border-width: 3;" AnchorPane.leftAnchor="10.0">
                      <children>
                         <Label id="pizza_title" prefHeight="71.0" prefWidth="316.0" text="Pizza Size">
                            <font>
@@ -95,7 +95,7 @@
                               </RadioButton>
                            </children>
                            <VBox.margin>
-                              <Insets />
+                              <Insets top="5.0" />
                            </VBox.margin>
                         </HBox>
                    <fx:define>
@@ -122,16 +122,9 @@
                      <font>
                         <Font name="Heiti TC Light" size="43.0" />
                      </font>
-                     <graphic>
-                        <ImageView fitHeight="76.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true" rotate="-85.2">
-                           <image>
-                              <Image url="@../resources/pizza-logo2.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
                   </Label>
                   <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="290.0" />
-                  <VBox layoutX="514.0" layoutY="119.0" prefHeight="257.0" prefWidth="497.0" spacing="15.0" style="-fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 3;">
+                  <VBox layoutX="514.0" layoutY="119.0" prefHeight="257.0" prefWidth="497.0" spacing="15.0" style="-fx-border-color: black; -fx-border-radius: 6; -fx-border-width: 3;">
                      <children>
                         <Label id="toppings_title" prefHeight="64.0" prefWidth="299.0" text="Toppings">
                            <font>
@@ -141,9 +134,9 @@
                               <Insets />
                            </VBox.margin>
                            <graphic>
-                              <ImageView fitHeight="68.0" fitWidth="64.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="68.0" fitWidth="64.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" rotate="4.8">
                                  <image>
-                                    <Image url="@../resources/pepperoni.png" />
+                                    <Image url="@../resources/Topping.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -197,6 +190,9 @@
                                        </font>
                                     </CheckBox>
                                  </children>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
                               </VBox>
                            </children>
                            <padding>
@@ -208,7 +204,7 @@
                         <Insets bottom="5.0" left="30.0" right="10.0" top="25.0" />
                      </padding>
                   </VBox>
-                  <VBox layoutX="9.0" layoutY="405.0" prefHeight="278.0" prefWidth="491.0" spacing="10.0" style="-fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 3;" AnchorPane.leftAnchor="9.0">
+                  <VBox layoutX="9.0" layoutY="405.0" prefHeight="278.0" prefWidth="491.0" spacing="10.0" style="-fx-border-color: black; -fx-border-radius: 6; -fx-border-width: 3;" AnchorPane.leftAnchor="9.0">
                      <children>
                         <Label id="drinks_title" prefHeight="67.0" prefWidth="257.0" text="Drinks">
                            <VBox.margin>
@@ -229,17 +225,17 @@
                            <children>
                               <HBox spacing="30.0">
                                  <children>
-                                    <RadioButton fx:id="coke" mnemonicParsing="false" prefHeight="30.0" prefWidth="107.0" text="Coke">
+                                    <RadioButton fx:id="coke" mnemonicParsing="false" prefHeight="30.0" prefWidth="113.0" text="Coke">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton fx:id="seven_up" mnemonicParsing="false" prefHeight="30.0" prefWidth="109.0" text="7 Up">
+                                    <RadioButton fx:id="seven_up" mnemonicParsing="false" prefHeight="30.0" prefWidth="106.0" text="7 Up">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
                                     </RadioButton>
-                                    <RadioButton fx:id="juice" mnemonicParsing="false" prefHeight="30.0" prefWidth="142.0" text="Juice">
+                                    <RadioButton fx:id="juice" mnemonicParsing="false" prefHeight="30.0" prefWidth="128.0" text="Juice">
                                        <font>
                                           <Font size="22.0" />
                                        </font>
@@ -280,7 +276,7 @@
                         <Insets bottom="5.0" left="30.0" right="10.0" top="25.0" />
                      </padding>
                   </VBox>
-                  <VBox layoutX="514.0" layoutY="405.0" prefHeight="278.0" prefWidth="496.0" spacing="10.0" style="-fx-border-color: black; -fx-border-radius: 8; -fx-border-width: 3;">
+                  <VBox layoutX="514.0" layoutY="405.0" prefHeight="278.0" prefWidth="496.0" spacing="10.0" style="-fx-border-color: black; -fx-border-radius: 6; -fx-border-width: 3;">
                      <children>
                         <Label id="dippings_title" prefHeight="67.0" prefWidth="257.0" text="Dippings">
                            <VBox.margin>

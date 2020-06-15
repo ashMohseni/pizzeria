@@ -22,6 +22,7 @@
 
 .root{
     -fx-background-image: url("../resources/white-background.jpg");
+    -fx-background-color: transparent;
     -fx-opacity: 0.95;
     -fx-background-size: cover;
 }
