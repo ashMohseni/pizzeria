@@ -17,7 +17,7 @@
    <center>
       <AnchorPane prefHeight="857.0" prefWidth="1220.0" stylesheets="@../pizzeria.css" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="TOP_LEFT" layoutX="629.0" layoutY="139.0" onMouseClicked="#sign_up" prefHeight="61.0" prefWidth="198.0" stylesheets="@../pizzeria.css" text="Sign in Page" textFill="WHITE">
+            <Label alignment="TOP_LEFT" layoutX="629.0" layoutY="139.0" onMouseClicked="#sign_up" prefHeight="61.0" prefWidth="198.0" stylesheets="@../pizzeria.css" text="Sign in Page">
                <font>
                   <Font name="Bebas Neue Regular" size="47.0" />
                </font>
@@ -78,9 +78,9 @@
                               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
                            </padding>
                            <children>
-                              <Label id="pass-title" text="Need an account?">
+                              <Label text="Need an account?">
                                  <font>
-                                    <Font size="25.0" />
+                                    <Font size="20.0" />
                                  </font>
                                  <HBox.margin>
                                     <Insets left="30.0" />
@@ -108,10 +108,10 @@
          <children>
             <ImageView fx:id="gitHub" fitHeight="40.0" fitWidth="46.0" layoutX="708.0" layoutY="27.0" onMouseClicked="#git" onMouseEntered="#gitEffect" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/GitHub-Mark-Light-120px-plus.png" />
+                  <Image url="@../../resources/GitHub-Mark-120px-plus.png" />
                </image>
             </ImageView>
-            <Label layoutX="668.0" layoutY="73.0" prefHeight="27.0" prefWidth="157.0" text="Created by Ash" textFill="WHITE">
+            <Label layoutX="668.0" layoutY="73.0" prefHeight="27.0" prefWidth="157.0" text="Created by Ash">
                <font>
                   <Font name="Abel Regular" size="21.0" />
                </font>

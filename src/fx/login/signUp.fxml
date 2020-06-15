@@ -17,7 +17,7 @@
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" stylesheets="@../pizzeria.css" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="629.0" layoutY="163.0" text="Sign up Page" textFill="WHITE">
+            <Label layoutX="629.0" layoutY="163.0" text="Sign up Page">
                <font>
                   <Font name="Bebas Neue Regular" size="47.0" />
                </font>
@@ -111,10 +111,10 @@
          <children>
             <ImageView fx:id="gitHub" fitHeight="40.0" fitWidth="46.0" layoutX="707.0" layoutY="30.0" onMouseClicked="#git" onMouseEntered="#gitEffect" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../resources/GitHub-Mark-Light-120px-plus.png" />
+                  <Image url="@../../resources/GitHub-Mark-120px-plus.png" />
                </image>
             </ImageView>
-            <Label layoutX="666.0" layoutY="75.0" prefHeight="27.0" prefWidth="157.0" text="Created by Ash" textFill="WHITE">
+            <Label layoutX="666.0" layoutY="75.0" prefHeight="27.0" prefWidth="157.0" text="Created by Ash">
                <font>
                   <Font name="Abel Regular" size="21.0" />
                </font>
